@@ -1,0 +1,312 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "ubuntu";
+}
+a{
+    all: none;
+    color: black;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #821430;
+    height: 100%;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+header{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    align-items: center;
+    background: #fdfaf5;
+    padding: 0 10px;
+    z-index: 1;
+
+}
+
+/*############### NAV BAR #####################*/
+
+.logo{
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+}
+.img_logo{
+    margin-right:30px;
+    width: 6rem;
+}
+.title{
+    font-size: 2.7rem;
+    margin: 0 10px;
+    color: #854556;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    transition: .5s;
+}
+.title:hover{
+    color: #e4819c;
+}
+
+header .header-left {
+    display: flex;
+}
+header .header-left nav ul {
+    display: flex;
+}
+nav ul li a {
+    font-family: 'Rubik', Arial, sans-serif;
+    font-weight: 600;
+    max-width: inherit;
+    display: block;
+    color: #854556;
+    font-size: 1.5rem;
+    padding: 5px 20px;
+    border-radius: 25px;
+    transition: .5s;
+}
+nav ul li a:hover{
+    background-color: #e8a9b2; 
+    color: #9b0029;
+}
+@media only screen and (min-width: 1001px) {
+    
+    header .header-right {
+        margin: 0;
+        position: absolute;
+        top: -100%;
+        transition: 0.3s;
+        z-index: 1;
+    }
+}
+header .header-right {
+    display: flex;
+}
+header .header-right .hamburger {
+    margin-left: 20px;
+    cursor: pointer;
+    display: none;
+}
+header .header-right .hamburger div {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #854556;
+}
+@media only screen and (max-width: 1000px) {
+    header .header-right .hamburger {
+        display: block;
+    }
+    header .header-left nav {
+        margin: 0;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        background-color: #fdfaf5;
+        padding: 30px;
+        transition: 0.4s;
+        text-align: center;
+        z-index: 0;
+
+    }
+    main div.active{
+        transition: .44s;
+        margin-top: 230px;
+    }
+    header .header-left nav.active {
+        top: 140px;
+    }
+    header .header-left nav ul {
+        display: block;
+    }
+}
+@media only screen and (max-width: 376px) {
+    nav{
+        display: block;
+        margin-top: 20px;
+    }
+    .title{
+        font-size: 1.5em;
+    }
+    .img_logo{
+        margin-right:15px;
+        width: 4rem;
+    }
+    header .header-right .hamburger div {
+        width: 30px;
+        height: 2px;
+        margin: 5px 0;
+        background: #854556;
+    }
+}
+
+/*###############  MAIN #####################*/
+
+main{
+    overflow-wrap: break-word;
+    padding: 4rem 0;
+    background-image: url("../images/cdc-GDokEYnOfnE-unsplash.jpg");
+    width: 100%;
+    height: 110vh;
+    overflow-x: hidden;
+}
+
+.gray_bg{
+    width: 1000px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    max-width: 100%;
+}
+
+.main_title{
+    font-family: 'Poppins', Arial, sans-serif;
+    text-shadow: 5px 5px #db1a32;
+    font-weight: 700;
+    font-size: 7.5rem;
+    margin: z0px 10px 0;
+    color: #ffffff;
+}
+.main_subtitle{
+    text-shadow: 5px 5px #9b0029;
+    overflow-wrap: break-word;
+    font-family: 'Rubik', Arial, sans-serif;
+    color: #f7bec6;
+    font-size: 2.5em;
+    margin: 10px 25px 0;
+}
+
+#info-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 2;
+    align-items: center;
+}
+
+.info{
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+    position: relative;
+    font-size: 3.5rem;
+    margin: 10px 25px 0;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 25px;
+    overflow: hidden;
+    border: 4px solid #ffffff;
+    border-radius: 500px;
+    z-index: 2;
+    transition: .4s;
+}
+
+.info:hover{
+    text-shadow: 5px 5px #000000;
+    border: 4px solid #db1a32;
+    cursor: pointer;
+}
+
+.info .round{
+    border-radius: 50%;
+    background-color: #db1a32;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    animation: scale-down 0.5s forwards;
+}
+.round{
+    z-index: -1;
+}
+
+.info.animate .round {
+    animation: scale-up 0.5s forwards;
+}
+
+@keyframes scale-up {
+    to {
+        transform: scale(800);
+    }
+}
+
+@keyframes scale-down {
+    from {
+        transform: scale(800);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .gray_bg{
+        height: 90vh;
+    }
+    .main_title{
+        font-size: 6em;
+        margin: 10px 0;
+
+    }
+    .main_subtitle{
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+    .info{
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+    
+}
+@media only screen and (max-width: 520px) {
+    .gray_bg{
+        height: 70vh;
+    }
+    .main_title{
+        font-size: 3em;
+        margin: 10px 0;
+
+    }
+    .main_subtitle{
+        font-size: 1.6em;
+        margin: 10px 0;
+    }
+    .info{
+        font-size: 1.8rem;
+        margin-top: 80px;
+    }
+}
+footer{
+    padding: 4px;
+    background-color: #fdfaf5;
+}
+.copyright_img{
+    font-family: 'Poppins', Courier, monospace;
+    font-weight: 200;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.unifesp_logo{
+    width: 96px;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #fefefe;
+}
