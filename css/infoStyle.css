@@ -165,7 +165,8 @@ header .header-right .hamburger div {
     max-width: 90%;
     min-width: 90%;
     margin: 20px;
-    padding: 2px;
+    border: 40px;
+    padding: 10px;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -182,6 +183,9 @@ header .header-right .hamburger div {
 .card_c {
     margin: 2px 0px;
 }
+
+
+
 .main_img{
     width: 450px;
 }
@@ -191,16 +195,16 @@ h1{
     font-size: 3em;
 }
 h3{
+    display: flex;
     font-family: 'Overlock', Arial, sans-serif;
     inline-size: 600px;
-    overflow-wrap: break-word;
     font-weight: 400;
     min-height: 130px;
     font-size: 2em;
+    align-items: center;
 }
 h3, h1{
     color: #fdfaf5;
-    text-align: center;
 }
 
 @media only screen and (max-width: 1100px){
@@ -217,7 +221,7 @@ h3, h1{
         font-family: 'Overlock', Arial, sans-serif;
         font-weight: 400;
         min-height: 130px;
-        font-size: 1em;
+        font-size: 1.5em;
     }
 }
 @media only screen and (max-width: 520px){
@@ -227,14 +231,16 @@ h3, h1{
     h1{
         font-family: 'Rubik', Arial, sans-serif;;
         font-weight: 600;
-        font-size: 1.5em;
+        font-size: 2em;
     }
     h3{
         font-family: 'Overlock', Arial, sans-serif;
         font-weight: 400;
-        min-height: 130px;
-        font-size: 0.7em;
+        min-height: 250px;
+        max-height: 250px;
+        font-size: 1.3em;
     }
+    
 }
 
 
